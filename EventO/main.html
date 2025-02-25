@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" />
+    <title>Event Management</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <img src="EventO.1.png" alt="Evento Logo" class="logo">
+                <div class="nav-links">
+                    <a href="Registration.html" class="btn">Login</a>
+                    <a href="#" class="btn" onclick="redirectToMap()">Locate Us</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="sub-nav-toggle" onclick="toggleSubNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    
+        <!-- Sub-Navigation -->
+        <div class="sub-nav">
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="venues.html">Venues</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="video-background"></div>
+        <video autoplay muted loop playsinline>
+            <source src="video1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="hero-section">
+
+        <div class="hero-text">
+            Your Occasions, Your Way
+        </div>
+        
+            <div class="search-bar">
+                <span class="search-icon"><i class="fas fa-search"></i></span>
+                <input type="text" id="search-input" placeholder="Search here....">
+                <button id="voice-search-btn"><i class="fas fa-microphone"></i></button>
+            </div>
+        
+            <script src="script.js"></script>
+        <script>
+          const searchInput = document.getElementById('search-input');
+          const voiceSearchBtn = document.getElementById('voice-search-btn');
+          
+          voiceSearchBtn.addEventListener('click', () => {
+              // Initialize the speech recognition object
+              const recognition = new webkitSpeechRecognition();
+          
+              // Set the language to English (you can change this to any other language)
+              recognition.lang = 'en-US';
+          
+              // Set the max results to 10 (you can change this to any other number)
+              recognition.maxResults = 10;
+          
+              // Start the speech recognition
+              recognition.start();
+          
+              // Handle the result event
+              recognition.onresult = event => {
+                  const transcript = event.results[0][0].transcript;
+                  searchInput.value = transcript;
+              };
+          
+              // Handle the error event
+              recognition.onerror = event => {
+                  console.error('Error occurred:', event);
+              };
+          
+              // Handle the end event
+              recognition.onend = () => {
+                  console.log('Speech recognition ended');
+              };
+          });</script>
+        </div>
+    </div>
+
+    <main>
+        <section class="intro">
+            <p>At Evento, we believe that every occasion is unique and deserves a personalized touch.</p>
+        </section>
+
+        <section class="stats">
+            <h2>MAJOR CITIES</h2>
+            <h3>We Are There For You</h3>
+            <div class="place-stats">
+                <div class="stat-box">
+                    <h2>4 Cities</h2>
+                    <img src="citi.svg" alt="Cities" width="200px">
+                </div>
+                <div class="stat-box">
+                    <h2>100+ Venues</h2>
+                    <img src="venue.svg" alt="Venues" width="200px">
+                </div>
+            </div>
+        </section>
+
+        <section class="city-cards">
+            <div class="city-card">
+                <img src="mumbai.jpeg" alt="Mumbai">
+                <h3>Mumbai</h3>
+                <p style="text-align: center;"><b>NAMASTE MUMBAI!</b><br>With a decent price, we have launched our franchise in Bandra, Andheri, and Dadar.</p>
+            </div>
+            <div class="city-card">
+                <img src="chennai.jpeg" alt="Chennai">
+                <h3>Chennai</h3>
+                <p style="text-align: center;"><b>VANAKKAM!</b><br>Chennai welcomes you with open arms.</p>
+            </div>
+            <div class="city-card">
+                <img src="delhi.jpg" alt="Delhi" >
+                <h3>Delhi</h3>
+                <p style="text-align: center;"><b>YEH SHEHER NAI MEHFIL HAI!</b><br>Let's have our Mehfil in Agra City.</p>
+            </div>
+            <div class="city-card">
+                <img src="bangalore.jpeg" alt="Bangalore">
+                <h3>Bangalore</h3>
+                <p style="text-align: center;"><b>SPACE CITY</b><br>Bangalore, we are coming...</p>
+            </div>
+        </section>
+        
+    </main>
+
+    <section class="testimonials">
+        <div class="testimonials-content">
+            <div class="testimonial-text">
+                <h2>Customers Love Us</h2>
+                <h3>MR. & Mrs. Rajput</h3>
+                <p>At Evento, the experience was hassle-free, proactive, and engaging. I would definitely recommend Evento to anyone who seeks a warm and professional event experience.</p>
+            </div>
+            <div class="testimonial-img">
+                <img src="royal.jpg" alt="Customer Feedback" width="300px">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="app-info">
+                <span class="app-name">
+                    <span class="app-initial">E</span>vento
+                </span>
+                <p>Providing you with <strong>well-organized</strong> events.</p>
+            </div>
+            <div class="useful-links">
+                <div class="footer-title">Useful Links</div>
+                <ul>
+                    <li><a href="venues.html">Venues</a></li>
+                    <li><a href="Registration.html">Sign In</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="#">Offers</a></li>
+                </ul>
+            </div>
+            <div class="help-sec">
+                <div class="footer-title">Help</div>
+                <ul>
+                    <li><a href="#">Help Me</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="#">Report an Issue / Bug</a></li>
+                </ul>
+            </div>
+            <div class="get-in-touch">
+                <div class="footer-title">Get in Touch</div>
+                <form action="/" method="post">
+                    <input type="text" name="name" class="form-input" placeholder="Name">
+                    <input type="email" name="email" class="form-input" placeholder="Email">
+                    <textarea name="message" class="form-input" placeholder="Message..."></textarea>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2024 Evento Services Pvt. Ltd.
+        </div>
+    </footer>
+
+    <script>
+        function redirectToMap() {
+            const mapUrl = 'https://maps.app.goo.gl/DqtcTpxd28bRUjBk9';
+            window.open(mapUrl, '_blank');
+        }
+    </script>
+    <!-- Chatbot Integration -->
+    <button class="chatbot-button" id="chatbotButton">
+        <!-- <img src="fa" alt="Chat Icon"> -->
+      <li class="fa-brands fa-whatsapp" style="font-size: 30px;"></li>
+    </button>
+
+    <div class="chatbot-container" id="chatbotContainer">
+        <div class="chatbot-header">
+            <div class="agent-info">
+                <img src="chatbot.png" alt="Agent">
+                <div>
+                    <p>EventO<span>(Online)</span></p>
+                </div>
+            </div>
+            <div class="close-btn" id="closeChatbot">&times;</div>
+        </div>
+
+        <div class="chatbot-body" id="chatBody">
+            <div class="chatbot-message">
+                <img src="chatbot.png" alt="Agent">
+                <div class="message-content">Hey! How can I assist you today?</div>
+            </div>
+
+                    <!-- Predefined Questions -->
+          <div class="predefined-questions">
+            <button class="chatbot-btn" onclick="reply('New Event Enquiry')">New Event Enquiry</button>
+            <button class="chatbot-btn" onclick="reply('Existing Event Enquiry')">Existing Event Enquiry</button>
+            <button class="chatbot-btn" onclick="reply('New Vendor Registration')">New Vendor Registration</button>
+        </div>
+
+        </div>
+
+        <div class="chatbot-footer">
+            <input type="text" id="chatInput" placeholder="Send a message..." autocomplete="off">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        const chatbotButton = document.getElementById('chatbotButton');
+    const chatbotContainer = document.getElementById('chatbotContainer');
+    const closeChatbot = document.getElementById('closeChatbot');
+    const chatBody = document.getElementById('chatBody');
+    const chatInput = document.getElementById('chatInput');
+    
+    // Show chatbot when button is clicked
+    chatbotButton.addEventListener('click', () => {
+        chatbotContainer.style.display = 'flex';
+    });
+    
+    // Close chatbot
+    closeChatbot.addEventListener('click', () => {
+        chatbotContainer.style.display = 'none';
+    });
+    
+    // Send user message
+    function sendMessage() {
+        const message = chatInput.value.trim();
+        if (message !== "") {
+            displayUserMessage(message);
+            chatInput.value = ''; // Clear input field
+    
+            // Simulate bot response (replace with real chatbot integration if needed)
+            setTimeout(() => {
+                displayBotMessage('Let me assist you with that.');
+            }, 1000);
+        }
+    }
+    
+    // Display user message in chat body
+    function displayUserMessage(message) {
+        const userMessage = `
+            <div class="chatbot-message user-message">
+                <div class="message-content">${message}</div>
+            </div>`;
+        chatBody.innerHTML += userMessage;
+        chatBody.scrollTop = chatBody.scrollHeight; // Scroll to the bottom
+    }
+    
+    // Display bot message in chat body
+    function displayBotMessage(message) {
+        const botMessage = `
+            <div class="chatbot-message">
+                <img src="chatbot.png" alt="Agent">
+                <div class="message-content">${message}</div>
+            </div>`;
+        chatBody.innerHTML += botMessage;
+        chatBody.scrollTop = chatBody.scrollHeight; // Scroll to the bottom
+    }
+    
+    // Handle predefined question clicks
+    function reply(question) {
+        displayUserMessage(question);
+    
+        // Example predefined bot replies (can be expanded as needed)
+        let botResponse = "";
+        if (question === 'New Event Enquiry') {
+            botResponse = "Please provide details of your new event.";
+        } else if (question === 'Existing Event Enquiry') {
+            botResponse = "Please share the event ID for us to assist with your existing event.";
+        } else if (question === 'New Vendor Registration') {
+            botResponse = "Please submit your vendor details for registration.";
+        }
+    
+        setTimeout(() => {
+            displayBotMessage(botResponse);
+        }, 1000);
+    }
+    function toggleSubNav() {
+        document.querySelector(".sub-nav").classList.toggle("active");
+    }
+    
+    </script>
+</body>
+
+</html>

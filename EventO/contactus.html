@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" />
+    <link rel="stylesheet" href="main.css">
+    <title>Contact Us - EventO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background-color: #3d3d96;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .contact-info div {
+            width: 48%;
+        }
+        .contact-info h2 {
+            margin-top: 0;
+        }
+        .form-section {
+            padding: 20px;
+            border-radius: 10px;
+            width: 300%;
+        }
+        .form-section h3 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 300%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group input[type="submit"] {
+            background-color: #3d3d96;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        .form-group input[type="submit"]:hover {
+            background-color: #333;
+        }
+        .contact-details {
+            text-align: center;
+        }
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+        }
+        .form-section>form{
+            width: 165%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <img src="EventO.1.png" alt="Evento Logo" class="logo">
+                <div class="nav-links">
+                    <a href="Registration.html" class="btn">Login</a>
+                    <a href="#" class="btn" onclick="redirectToMap()">Locate Us</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="sub-nav">
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="venues.html">Venues</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+             
+            </ul>
+        </div>
+    </header>
+<div class="container">
+    <div class="header">
+        <h1>We're all hears! Get in touch with EventO</h1>
+    </div>
+
+    <div class="contact-info">
+        <div>
+            <h2>Contact Details</h2>
+            <p><strong>Email:</strong> info@evento.com</p>
+            <p><strong>Address:</strong> EventO Corporate Office, 123 Main Street,BKC, 60601</p>
+            <p><strong>Phone:</strong> +1 555-555-5555</p>
+        </div>
+        <div>
+            <h2>Enquire Here</h2>
+            <div class="form-section">
+                <form action="/submit" method="post">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email Id</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="number">Your Number</label>
+                        <input type="text" id="number" name="number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">Your City</label>
+                        <select id="city" name="city" required>
+                            <option value="">--Select City--</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Pune">Pune</option>
+                            <option value="Ahmedabad">Ahmedabad</option>
+                            <!-- Add more cities as necessary -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Pick a Category</label>
+                        <select id="category" name="category" required>
+                            <option value="">--Select Category--</option>
+                            <option value="Venue/Banquet Hall">Venue/Banquet Hall</option>
+                            <option value="Catering">Catering</option>
+                            <option value="Entertainment">Entertainment</option>
+                            <!-- Add more categories as necessary -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="robot" required> I'm not a robot
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-details">
+        <h2>Our Location</h2>
+        <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.6386140027454!2d72.85616411490147!3d19.080320487086742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63e9c2e1a81%3A0xabe59f2098bd46c3!2sACME%20PLAZA!5e0!3m2!1sen!2sin!4v1694610934245!5m2!1sen!2sin" 
+    width="600" 
+    height="450" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+    </div>
+</div>
+<footer>
+    <div class="footer-container">
+        <div class="app-info">
+            <span class="app-name">
+                <span class="app-initial">E</span>vento
+            </span>
+            <p>Providing you with <strong>well-organized</strong> events.</p>
+        </div>
+        <div class="useful-links">
+            <div class="footer-title">Useful Links</div>
+            <ul>
+                <li><a href="venues.html">Venues</a></li>
+                <li><a href="Registration.html">Sign In</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="#">Offers</a></li>
+            </ul>
+        </div>
+        <div class="help-sec">
+            <div class="footer-title">Help</div>
+            <ul>
+                <li><a href="#">Help Me</a></li>
+                <li><a href="#">Feedback</a></li>
+                <li><a href="#">Report an Issue / Bug</a></li>
+            </ul>
+        </div>
+        <div class="get-in-touch">
+            <div class="footer-title">Get in Touch</div>
+            <form action="/" method="post">
+                <input type="text" name="name" class="form-input" placeholder="Name">
+                <input type="email" name="email" class="form-input" placeholder="Email">
+                <textarea name="message" class="form-input" placeholder="Message..."></textarea>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="copyright">
+        &copy; 2024 Evento Services Pvt. Ltd.
+    </div>
+</footer>
+  <!-- Chatbot Integration -->
+  <button class="chatbot-button" id="chatbotButton">
+    <!-- <img src="fa" alt="Chat Icon"> -->
+  <li class="fa-brands fa-whatsapp" style="font-size: 30px;"></li>
+</button>
+
+<div class="chatbot-container" id="chatbotContainer">
+    <div class="chatbot-header">
+        <div class="agent-info">
+            <img src="chatbot.png" alt="Agent">
+            <div>
+                <p>EventO<span>(Online)</span></p>
+            </div>
+        </div>
+        <div class="close-btn" id="closeChatbot">&times;</div>
+    </div>
+
+    <div class="chatbot-body" id="chatBody">
+        <div class="chatbot-message">
+            <img src="chatbot.png" alt="Agent">
+            <div class="message-content">Hey! How can I assist you today?</div>
+        </div>
+
+                <!-- Predefined Questions -->
+      <div class="predefined-questions">
+        <button class="chatbot-btn" onclick="reply('New Event Enquiry')">New Event Enquiry</button>
+        <button class="chatbot-btn" onclick="reply('Existing Event Enquiry')">Existing Event Enquiry</button>
+        <button class="chatbot-btn" onclick="reply('New Vendor Registration')">New Vendor Registration</button>
+    </div>
+
+    </div>
+
+    <div class="chatbot-footer">
+        <input type="text" id="chatInput" placeholder="Send a message..." autocomplete="off">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<script>
+    const chatbotButton = document.getElementById('chatbotButton');
+const chatbotContainer = document.getElementById('chatbotContainer');
+const closeChatbot = document.getElementById('closeChatbot');
+const chatBody = document.getElementById('chatBody');
+const chatInput = document.getElementById('chatInput');
+
+// Show chatbot when button is clicked
+chatbotButton.addEventListener('click', () => {
+    chatbotContainer.style.display = 'flex';
+});
+
+// Close chatbot
+closeChatbot.addEventListener('click', () => {
+    chatbotContainer.style.display = 'none';
+});
+
+// Send user message
+function sendMessage() {
+    const message = chatInput.value.trim();
+    if (message !== "") {
+        displayUserMessage(message);
+        chatInput.value = ''; // Clear input field
+
+        // Simulate bot response (replace with real chatbot integration if needed)
+        setTimeout(() => {
+            displayBotMessage('Let me assist you with that.');
+        }, 1000);
+    }
+}
+
+// Display user message in chat body
+function displayUserMessage(message) {
+    const userMessage = `
+        <div class="chatbot-message user-message">
+            <div class="message-content">${message}</div>
+        </div>`;
+    chatBody.innerHTML += userMessage;
+    chatBody.scrollTop = chatBody.scrollHeight; // Scroll to the bottom
+}
+
+// Display bot message in chat body
+function displayBotMessage(message) {
+    const botMessage = `
+        <div class="chatbot-message">
+            <img src="chatbot.png" alt="Agent">
+            <div class="message-content">${message}</div>
+        </div>`;
+    chatBody.innerHTML += botMessage;
+    chatBody.scrollTop = chatBody.scrollHeight; // Scroll to the bottom
+}
+
+// Handle predefined question clicks
+function reply(question) {
+    displayUserMessage(question);
+
+    // Example predefined bot replies (can be expanded as needed)
+    let botResponse = "";
+    if (question === 'New Event Enquiry') {
+        botResponse = "Please provide details of your new event.";
+    } else if (question === 'Existing Event Enquiry') {
+        botResponse = "Please share the event ID for us to assist with your existing event.";
+    } else if (question === 'New Vendor Registration') {
+        botResponse = "Please submit your vendor details for registration.";
+    }
+
+    setTimeout(() => {
+        displayBotMessage(botResponse);
+    }, 1000);
+}
+</script>
+</body>
+</html>
