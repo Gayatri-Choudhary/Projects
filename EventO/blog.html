@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venue Options | EventO</title>
+        <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Reset some basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f9;
+            overflow-x: hidden;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+        }
+        
+        .logo {
+            height: 50px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .btn {
+            background-color: #ff6f61;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #ff3e3e;
+        }
+        
+        .sub-nav {
+            background-color: #333;
+            padding: 10px 0;
+        }
+        
+        .sub-nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .sub-nav a {
+            color: #aa1732;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .sub-nav a:hover {
+            color: #ff6f61;
+        }
+
+        /* Styling for the main heading */
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 3rem;
+            margin: 40px 0 20px;
+        }
+
+        /* Container to keep the content centralized */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Individual venue card styling - Updated to match blog style */
+        .venue {
+            background-color: #fff;
+            margin: 30px 0;
+            padding: 25px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .venue:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Styling for the venue image */
+        .venue img {
+            width: 250px;
+            height: 200px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-right: 25px;
+        }
+
+        /* Styling for the text within the venue card */
+        .venue h2 {
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 1.75rem;
+        }
+
+        .venue p {
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        /* Button styling - Updated to match blog style */
+        .venue a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #ff6f61;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .venue a:hover {
+            background-color: #ff3e3e;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 50px;
+        }
+        
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 50px;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .app-info {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .app-name {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .app-initial {
+            color: #ff6f61;
+        }
+        
+        .useful-links, .help-sec {
+            flex: 1;
+            min-width: 150px;
+        }
+        
+        .footer-title {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        footer ul {
+            list-style: none;
+        }
+        
+        footer ul li {
+            margin-bottom: 10px;
+        }
+        
+        footer ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        footer ul li a:hover {
+            color: #ff6f61;
+        }
+        
+        .get-in-touch {
+            flex: 2;
+            min-width: 300px;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #444;
+            color: white;
+        }
+        
+        .form-input::placeholder {
+            color: #aaa;
+        }
+        
+        .submit-btn {
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #ff3e3e;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #555;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Chatbot Styles */
+        .chatbot-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            border: none;
+            color: white;
+        }
+        
+        .chatbot-container {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 350px;
+            height: 500px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            display: none;
+            flex-direction: column;
+            z-index: 1000;
+            overflow: hidden;
+        }
+        
+        .chatbot-header {
+            background-color: #ff6f61;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .agent-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .agent-info img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        
+        .close-btn {
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+        
+        .chatbot-body {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .chatbot-message {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .chatbot-message.user-message {
+            justify-content: flex-end;
+        }
+        
+        .chatbot-message img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+        
+        .message-content {
+            background-color: #f1f1f1;
+            padding: 10px 15px;
+            border-radius: 18px;
+            max-width: 80%;
+        }
+        
+        .user-message .message-content {
+            background-color: #ff6f61;
+            color: white;
+        }
+        
+        .predefined-questions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .chatbot-btn {
+            background-color: #f1f1f1;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 18px;
+            cursor: pointer;
+            text-align: left;
+            transition: background-color 0.3s;
+        }
+        
+        .chatbot-btn:hover {
+            background-color: #e0e0e0;
+        }
+        
+        .chatbot-footer {
+            padding: 15px;
+            border-top: 1px solid #eee;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .chatbot-footer input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            outline: none;
+        }
+        
+        .chatbot-footer button {
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .chatbot-footer button:hover {
+            background-color: #ff3e3e;
+        }
+
+        /* Floating Bubbles */
+        .bubbles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        .bubble {
+            position: absolute;
+            bottom: -150px;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 111, 97, 0.2);
+            border-radius: 50%;
+            animation: rise 6s infinite ease-in;
+        }
+        
+        @keyframes rise {
+            0% {
+                bottom: -150px;
+                transform: translateX(0);
+            }
+            100% {
+                bottom: 100vh;
+                transform: translateX(100px);
+            }
+        }
+        
+        .bubble:nth-child(2) {
+            width: 60px;
+            height: 60px;
+            animation-duration: 7s;
+            left: 10%;
+        }
+        
+        .bubble:nth-child(3) {
+            width: 30px;
+            height: 30px;
+            animation-duration: 5s;
+            left: 20%;
+        }
+        
+        .bubble:nth-child(4) {
+            width: 50px;
+            height: 50px;
+            animation-duration: 6s;
+            left: 30%;
+        }
+        
+        .bubble:nth-child(5) {
+            width: 20px;
+            height: 20px;
+            animation-duration: 4s;
+            left: 40%;
+        }
+
+        /* Animations */
+        .animate__fadeIn {
+            animation: fadeIn 2s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .animate__slideInLeft {
+            animation: slideInLeft 2s ease-in;
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        .animate__slideInRight {
+            animation: slideInRight 2s ease-in;
+        }
+        
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .venue {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .venue img {
+                margin-right: 0;
+                margin-bottom: 20px;
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .nav-container {
+                padding: 15px 20px;
+            }
+            
+            .sub-nav ul {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+            
+            .footer-container {
+                padding: 0 20px;
+            }
+            
+            .chatbot-container {
+                width: 300px;
+                right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <img src="EventO.1.png" alt="Evento Logo" class="logo">
+                <div class="nav-links">
+                    <a href="Registration.html" class="btn">Login</a>
+                    <a href="#" class="btn" onclick="redirectToMap()">Locate Us</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="sub-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="venues.html">Venues</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <h1 class="animate__fadeIn">Explore Venues for Your Event</h1>
+
+    <div class="container">
+        <!-- Venue Card 1 -->
+        <div class="venue animate__slideInRight">
+            <img src="grand hyatt.webp" alt="Banquet Halls in Mumbai">
+            <div>
+                <h2>Banquet Halls</h2>
+                <p>Looking for an elegant space? Banquet halls in Grand Hyatt offer luxurious spaces to suit weddings, anniversaries, and other large-scale events.</p>
+                <a href="#">View Banquet Halls in Mumbai</a>
+            </div>
+        </div>
+
+        <!-- Venue Card 2 -->
+        <div class="venue animate__slideInLeft">
+            <img src="destination.jpg" alt="Wedding Venues in Mumbai">
+            <div>
+                <h2>Wedding Venues</h2>
+                <p>Make your dream wedding come true by choosing the finest wedding venues. Whether you want a small gathering or a grand celebration, we've got you covered.</p>
+                <a href="#">Discover Wedding Venues</a>
+            </div>
+        </div>
+
+        <!-- Venue Card 3 -->
+        <div class="venue animate__slideInRight">
+            <img src="bday.jpg" alt="Party Halls">
+            <div>
+                <h2>Party Halls</h2>
+                <p>Celebrate birthdays, anniversaries, or any special event! Our party halls in Mumbai offer options for every gathering size to ensure an unforgettable experience.</p>
+                <a href="#">Check Party Halls</a>
+            </div>
+        </div>
+
+        <!-- Venue Card 4 -->
+        <div class="venue animate__slideInLeft">
+            <img src="taj hotel.jpg" alt="5-Star Banquet Halls in Mumbai">
+            <div>
+                <h2>5-Star Banquet Halls</h2>
+                <p>Host your event at a 5-star banquet hall. Enjoy luxury and top-tier services, ensuring a flawless experience for your special day.</p>
+                <a href="#">Browse 5-Star Banquet Halls</a>
+            </div>
+        </div>
+
+        <!-- Venue Card 5 -->
+        <div class="venue animate__slideInRight">
+            <img src="aaaaa.jpg" alt="Banquet Halls Near Me">
+            <div>
+                <h2>Banquet Halls Near Me</h2>
+                <p>Convenience and class with our selection of banquet halls near you. Explore your options and find the perfect hall around the corner.</p>
+                <a href="#">Find Banquet Halls Near You</a>
+            </div>
+        </div>
+
+        <!-- Venue Card 6 -->
+        <div class="venue animate__slideInLeft">
+            <img src="outdoor.jpg" alt="Outdoor Venues">
+            <div>
+                <h2>Outdoor Venues</h2>
+                <p>Enjoy the beauty of nature with our selection of outdoor venues. Perfect for garden parties, outdoor weddings, and corporate retreats.</p>
+                <a href="#">Explore Outdoor Venues</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="bubbles">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="app-info">
+                <span class="app-name">
+                    <span class="app-initial">E</span>vento
+                </span>
+                <p>Providing you with <strong>well-organized</strong> events.</p>
+            </div>
+            <div class="useful-links">
+                <div class="footer-title">Useful Links</div>
+                <ul>
+                    <li><a href="venues.html">Venues</a></li>
+                    <li><a href="Registration.html">Sign In</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="#">Offers</a></li>
+                </ul>
+            </div>
+            <div class="help-sec">
+                <div class="footer-title">Help</div>
+                <ul>
+                    <li><a href="#">Help Me</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="#">Report an Issue / Bug</a></li>
+                </ul>
+            </div>
+            <div class="get-in-touch">
+                <div class="footer-title">Get in Touch</div>
+                <form action="/" method="post">
+                    <input type="text" name="name" class="form-input" placeholder="Name">
+                    <input type="email" name="email" class="form-input" placeholder="Email">
+                    <textarea name="message" class="form-input" placeholder="Message..."></textarea>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2024 Evento Services Pvt. Ltd.
+        </div>
+    </footer>
+
+    <!-- Chatbot Integration -->
+    <button class="chatbot-button" id="chatbotButton">
+        <i class="fa-brands fa-whatsapp" style="font-size: 30px;"></i>
+    </button>
+
+    <div class="chatbot-container" id="chatbotContainer">
+        <div class="chatbot-header">
+            <div class="agent-info">
+                <img src="chatbot.png" alt="Agent">
+                <div>
+                    <p>EventO<span>(Online)</span></p>
+                </div>
+            </div>
+            <div class="close-btn" id="closeChatbot">&times;</div>
+        </div>
+
+        <div class="chatbot-body" id="chatBody">
+            <div class="chatbot-message">
+                <img src="chatbot.png" alt="Agent">
+                <div class="message-content">Hey! How can I assist you today?</div>
+            </div>
+
+            <!-- Predefined Questions -->
+            <div class="predefined-questions">
+                <button class="chatbot-btn" onclick="reply('New Event Enquiry')">New Event Enquiry</button>
+                <button class="chatbot-btn" onclick="reply('Existing Event Enquiry')">Existing Event Enquiry</button>
+                <button class="chatbot-btn" onclick="reply('New Vendor Registration')">New Vendor Registration</button>
+            </div>
+        </div>
+
+        <div class="chatbot-footer">
+            <input type="text" id="chatInput" placeholder="Send a message..." autocomplete="off">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        // Map redirection function
+        function redirectToMap() {
+            const mapUrl = 'https://maps.app.goo.gl/DqtcTpxd28bRUjBk9';
+            window.open(mapUrl, '_blank');
+        }
+        
+        // Chatbot functionality
+        const chatbotButton = document.getElementById('chatbotButton');
+        const chatbotContainer = document.getElementById('chatbotContainer');
+        const closeChatbot = document.getElementById('closeChatbot');
+        const chatBody = document.getElementById('chatBody');
+        const chatInput = document.getElementById('chatInput');
+
+        // Show chatbot when button is clicked
+        chatbotButton.addEventListener('click', () => {
+            chatbotContainer.style.display = 'flex';
+        });
+
+        // Close chatbot
+        closeChatbot.addEventListener('click', () => {
+            chatbotContainer.style.display = 'none';
+        });
+
+        // Send message when Enter key is pressed
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        // Send user message
+        function sendMessage() {
+            const message = chatInput.value.trim();
+            if (message !== "") {
+                displayUserMessage(message);
+                chatInput.value = ''; // Clear input field
+
+                // Simulate bot response (replace with real chatbot integration if needed)
+                setTimeout(() => {
+                    displayBotMessage('Thank you for your message. Our team will get back to you shortly.');
+                }, 1000);
+            }
+        }
+
+        // Display user message in chat body
+        function displayUserMessage(message) {
+            const userMessage = `
+                <div class="chatbot-message user-message">
+                    <div class="message-content">${message}</div>
+                </div>`;
+            chatBody.innerHTML += userMessage;
+            chatBody.scrollTop = chatBody.scrollHeight; // Scroll to the bottom
+        }
+
+        // Display bot message in chat body
+        function displayBotMessage(message) {
+            const botMessage = `
+                <div class="chatbot-message">
+                    <img src="chatbot.png" alt="Agent">
+                    <div class="message-content">${message}</div>
+                </div>`;
+            chatBody.innerHTML += botMessage;
+            chatBody.scrollTop = chatBody.scrollHeight; // Scroll to the bottom
+        }
+
+        // Handle predefined question clicks
+        function reply(question) {
+            displayUserMessage(question);
+
+            // Example predefined bot replies (can be expanded as needed)
+            let botResponse = "";
+            if (question === 'New Event Enquiry') {
+                botResponse = "Please provide details of your new event including date, number of attendees, and type of event.";
+            } else if (question === 'Existing Event Enquiry') {
+                botResponse = "Please share your event ID or contact details so we can assist with your existing event.";
+            } else if (question === 'New Vendor Registration') {
+                botResponse = "Please visit our vendor registration page or provide your contact details for our team to reach out.";
+            }
+
+            setTimeout(() => {
+                displayBotMessage(botResponse);
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

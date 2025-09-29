@@ -1,0 +1,33 @@
+body{
+    padding: 0;
+}
+header{
+    background-color: cadetblue;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    text-decoration:solid;
+}
+nav{
+    background-color:aquamarine;
+    overflow: hidden;
+}
+nav a{
+    float: left;
+    display: block;
+    color: black;
+    /* text-align: center; */
+    padding: 14px 16px;
+    }
+section{
+        padding: 20px;
+        margin: 20px;
+}
+footer{
+    background-color: cadetblue;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    bottom: 0;
+    width: 100%;
+}        

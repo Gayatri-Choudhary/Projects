@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Event Management</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #e8dfef; /* Lighter background for a fresh look */
+            color: #333;
+        }
+
+        .header {
+            background-color: #410661; /* Bright blue for the header */
+            color: #fff;
+            text-align: center;
+          
+            position: relative;
+            overflow: hidden; 
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1) url('https://www.transparenttextures.com/patterns/3d-light.png');
+            z-index: 0;
+            background-blend-mode: overlay;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        } 
+        .header p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            position: relative;
+         z-index: 1; 
+         } 
+         .nav-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo {
+            width: 150px;
+        }
+                
+        .services-section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .services-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #d32f2f; /* Deep red color for section headings */
+            font-weight: 600;
+        }
+
+        .service-cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .service-card {
+            display: flex;
+            align-items: center;
+            background-color: #ffffff; /* White background for cards */
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            width: 45%; /* Adjusted to fit two cards per row */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            background-color: #fafafa; /* Light background color for the card */
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-card img {
+            width: 40%;
+            height:max-content;
+            border-radius: 10px;
+            margin-right: 20px;
+            object-fit: cover;
+        }
+
+        .service-card div {
+            width: 60%;
+            padding: 20px;
+            background-color: #ffffff; /* White background for text area */
+            border-radius: 10px;
+        }
+
+        .service-card h3 {
+            font-size: 1.6rem;
+            margin: 0;
+            color: #1e88e5; /* Bright blue for card titles */
+            font-weight: 600;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            color: #555; /* Darker gray for text */
+            line-height: 1.6;
+        }
+         
+        .book-now-btn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #1e88e5; /* Bright blue for button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .book-now-btn:hover {
+            background-color: #155fa0; /* Darker shade on hover */
+        }
+        
+        @media (max-width: 768px) {
+            .service-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .service-card img {
+                margin: 0 0 15px 0;
+                width: 100%;
+            }
+
+            .service-card div {
+                width: 100%;
+                padding: 15px;
+                background-color: #ffffff; /* Maintain background color on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <img src="EventO.1.png" alt="Evento Logo" class="logo">
+                <div class="nav-links">
+                    <a href="Registration.html" class="btn">Login</a>
+                    <a href="#" class="btn" onclick="redirectToMap()">Locate Us</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="sub-nav">
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="venues.html">Venues</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+               
+            </ul>
+        </div>
+    </header>
+    <h1 style="text-align:center">Our Services</h1>
+    <p style="text-align:center">Expertly crafted events tailored to your needs</p>
+</div>
+
+<div class="services-section">
+    <h2>What We Offer</h2>
+
+    <div class="service-cards-container">
+        <div class="service-card">
+            <img src="wedding.jpg" alt="Wedding">
+            <div>
+                <h3>Wedding</h3>
+                <p>Transform your dream wedding into reality with our exceptional planning and coordination services. From venue selection to decor and catering, we handle every detail with elegance and expertise to ensure your big day is flawless.</p>
+                <a href="booking.html"><button class="book-now-btn">Book Now</button></a>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="birthday.jpg" alt="Birthday Party">
+            <div>
+                <h3>Birthday Party</h3>
+                <p>Celebrate your special day with style and fun! Our birthday party services include theme planning, entertainment, and bespoke decorations, all tailored to make your birthday memorable and unique.</p>
+                <a href="booking.html"><button class="book-now-btn">Book Now</button></a>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="college fest.jpg" alt="College Fest">
+            <div>
+                <h3>College Fest</h3>
+                <p>Bring excitement and energy to your college fest with our comprehensive event management solutions. We provide everything from logistical support to entertainment, ensuring a vibrant and successful event.</p>
+                <a href="booking.html"><button class="book-now-btn">Book Now</button></a>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="engagement.jpg" alt="Engagement">
+            <div>
+                <h3>Engagement</h3>
+                <p>Celebrate your engagement with a memorable event. Our team handles all aspects of engagement planning, from venue selection to event coordination, ensuring a smooth and joyous experience.</p>
+                <a href="booking.html"><button class="book-now-btn">Book Now</button></a>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="mehendi.jpg" alt="Mehendi">
+            <div>
+                <h3>Mehendi</h3>
+                <p>Enhance your celebrations with beautiful mehendi designs. Our expert artists use traditional techniques to create stunning patterns that add a touch of cultural elegance to your event.</p>
+                <a href="booking.html"><button class="book-now-btn">Book Now</button></a>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="makeup.jpg" alt="Makeup">
+            <div>
+                <h3>Makeup</h3>
+                <p>Look and feel your best with our professional makeup services. Whether it’s for a wedding, party, or special occasion, our makeup artists ensure you have a flawless and radiant look that lasts all day.</p>
+                <a href="booking.html"><button class="book-now-btn">Book Now</button></a>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="decorators.jpg" alt="Decorators">
+            <div>
+                <h3>Decorators</h3>
+                <p>Create the perfect ambiance with our expert decorating services. From floral arrangements to custom themes, we bring your vision to life with creativity and attention to detail.</p>
+            
+                <a href="booking.html"><button class="book-now-btn">Book Now</button></a></div>
+        </div>
+
+    </div>
+</div>
+<footer>
+    <div class="footer-container">
+        <div class="app-info">
+            <span class="app-name">
+                <span class="app-initial">E</span>ventO
+            </span>
+            <p>Providing you with <strong>well-organized</strong> events.</p>
+        </div>
+        <div class="useful-links">
+            <div class="footer-title">Useful Links</div>
+            <ul>
+                <li><a href="venues.html">Venues</a></li>
+                <li><a href="Registration.html">Sign In</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="#">Offers</a></li>
+            </ul>
+        </div>
+        <div class="help-sec">
+            <div class="footer-title">Help</div>
+            <ul>
+                <li><a href="#">Help Me</a></li>
+                <li><a href="#">Feedback</a></li>
+                <li><a href="#">Report an Issue / Bug</a></li>
+            </ul>
+        </div>
+        <div class="get-in-touch">
+            <div class="footer-title">Get in Touch</div>
+            <form action="/" method="post">
+                <input type="text" name="name" class="form-input" placeholder="Name">
+                <input type="email" name="email" class="form-input" placeholder="Email">
+                <textarea name="message" class="form-input" placeholder="Message..."></textarea>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="copyright">
+        &copy; 2024 Evento Services Pvt. Ltd.
+    </div>
+</footer>
+<!-- Chatbot Integration -->
+<button class="chatbot-button" id="chatbotButton">
+    <!-- <img src="fa" alt="Chat Icon"> -->
+  <li class="fa-brands fa-whatsapp" style="font-size: 30px;"></li>
+</button>
+
+<div class="chatbot-container" id="chatbotContainer">
+    <div class="chatbot-header">
+        <div class="agent-info">
+            <img src="chatbot.png" alt="Agent">
+            <div>
+                <p>EventO<span>(Online)</span></p>
+            </div>
+        </div>
+        <div class="close-btn" id="closeChatbot">&times;</div>
+    </div>
+
+    <div class="chatbot-body" id="chatBody">
+        <div class="chatbot-message">
+            <img src="chatbot.png" alt="Agent">
+            <div class="message-content">Hey! How can I assist you today?</div>
+        </div>
+
+                <!-- Predefined Questions -->
+      <div class="predefined-questions">
+        <button class="chatbot-btn" onclick="reply('New Event Enquiry')">New Event Enquiry</button>
+        <button class="chatbot-btn" onclick="reply('Existing Event Enquiry')">Existing Event Enquiry</button>
+        <button class="chatbot-btn" onclick="reply('New Vendor Registration')">New Vendor Registration</button>
+    </div>
+
+    </div>
+
+    <div class="chatbot-footer">
+        <input type="text" id="chatInput" placeholder="Send a message..." autocomplete="off">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<script>
+    const chatbotButton = document.getElementById('chatbotButton');
+const chatbotContainer = document.getElementById('chatbotContainer');
+const closeChatbot = document.getElementById('closeChatbot');
+const chatBody = document.getElementById('chatBody');
+const chatInput = document.getElementById('chatInput');
+
+// Show chatbot when button is clicked
+chatbotButton.addEventListener('click', () => {
+    chatbotContainer.style.display = 'flex';
+});
+
+// Close chatbot
+closeChatbot.addEventListener('click', () => {
+    chatbotContainer.style.display = 'none';
+});
+
+// Send user message
+function sendMessage() {
+    const message = chatInput.value.trim();
+    if (message !== "") {
+        displayUserMessage(message);
+        chatInput.value = ''; // Clear input field
+
+        // Simulate bot response (replace with real chatbot integration if needed)
+        setTimeout(() => {
+            displayBotMessage('Let me assist you with that.');
+        }, 1000);
+    }
+}
+
+// Display user message in chat body
+function displayUserMessage(message) {
+    const userMessage = `
+        <div class="chatbot-message user-message">
+            <div class="message-content">${message}</div>
+        </div>`;
+    chatBody.innerHTML += userMessage;
+    chatBody.scrollTop = chatBody.scrollHeight; // Scroll to the bottom
+}
+
+// Display bot message in chat body
+function displayBotMessage(message) {
+    const botMessage = `
+        <div class="chatbot-message">
+            <img src="chatbot.png" alt="Agent">
+            <div class="message-content">${message}</div>
+        </div>`;
+    chatBody.innerHTML += botMessage;
+    chatBody.scrollTop = chatBody.scrollHeight; // Scroll to the bottom
+}
+
+// Handle predefined question clicks
+function reply(question) {
+    displayUserMessage(question);
+
+    // Example predefined bot replies (can be expanded as needed)
+    let botResponse = "";
+    if (question === 'New Event Enquiry') {
+        botResponse = "Please provide details of your new event.";
+    } else if (question === 'Existing Event Enquiry') {
+        botResponse = "Please share the event ID for us to assist with your existing event.";
+    } else if (question === 'New Vendor Registration') {
+        botResponse = "Please submit your vendor details for registration.";
+    }
+
+    setTimeout(() => {
+        displayBotMessage(botResponse);
+    }, 1000);
+}
+</script>
+</body>
+</html>

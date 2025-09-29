@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Venue Options | EventO</title>
+    <style>
+        /* Reset some basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ebd9f7;
+            margin: 0;
+           
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Styling for the main heading */
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        /* Container to keep the content centralized */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Individual venue card styling */
+        .venue {
+            background-color: #fff;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styling for the venue image */
+        .venue img {
+            width: 250px;
+            height: 150px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        /* Styling for the text within the venue card */
+        .venue h2 {
+            margin-bottom: 10px;
+            color: #2980b9;
+            font-size: 1.75rem;
+        }
+
+        .venue p {
+            color: #7f8c8d;
+        }
+
+        /* Button styling */
+        .venue a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #2980b9;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .venue a:hover {
+            background-color: #21618c;
+        }
+
+        /* Footer style for professional look */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #95a5a6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <img src="EventO.1.png" alt="Evento Logo" class="logo">
+                <div class="nav-links">
+                    <a href="Registration.html" class="btn">Login</a>
+                    <a href="#" class="btn" onclick="redirectToMap()">Locate Us</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="sub-nav">
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="venues.html">Venues</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+               
+            </ul>
+        </div>
+    </header>
+    <h1>Explore Venues for Your Event</h1>
+
+    <div class="container">
+        <!-- Venue Card 2 -->
+        <div class="venue">
+            <img src="grand hyatt.webp" alt="Banquet Halls in Mumbai">
+            <div>
+                <h2>Banquet Halls</h2>
+                <p>Looking for an elegant space? Banquet halls in Grand Hyatt offer luxurious spaces to suit weddings, anniversaries, and other large-scale events.</p>
+                <a href="#">View Banquet Halls in Mumbai</a>
+            </div>
+        </div>
+
+        <!-- Venue Card 3 -->
+        <div class="venue">
+            <img src="destination.jpg" alt="Wedding Venues in Mumbai">
+            <div>
+                <h2>Wedding Venues</h2>
+                <p>Make your dream wedding come true by choosing the finest wedding venues. Whether you want a small gathering or a grand celebration, we’ve got you covered.</p>
+                <a href="#">Discover Wedding Venues</a>
+            </div>
+        </div>
+
+        <!-- Venue Card 4 -->
+        <div class="venue">
+            <img src="bday.jpg" alt="Party Halls">
+            <div>
+                <h2>Party Halls</h2>
+                <p>Celebrate birthdays, anniversaries, or any special event! Our party halls in Mumbai offer options for every gathering size to ensure an unforgettable experience.</p>
+                <a href="#">Check Party Halls</a>
+            </div>
+        </div>
+
+        <!-- Venue Card 5 -->
+        <div class="venue">
+            <img src="taj hotel.jpg" alt="5-Star Banquet Halls in Mumbai">
+            <div>
+                <h2>5-Star Banquet Halls</h2>
+                <p>Host your event at a 5-star banquet hall. Enjoy luxury and top-tier services, ensuring a flawless experience for your special day.</p>
+                <a href="#">Browse 5-Star Banquet Halls</a>
+            </div>
+        </div>
+
+        <!-- Venue Card 6 -->
+        <div class="venue">
+            <img src="aaaaa.jpg" alt="Banquet Halls Near Me">
+            <div>
+                <h2>Banquet Halls Near Me</h2>
+                <p>Convenience and class with our selection of banquet halls near you. Explore your options and find the perfect hall around the corner.</p>
+                <a href="#">Find Banquet Halls Near You</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="app-info">
+                <span class="app-name">
+                    <span class="app-initial">E</span>ventO
+                </span>
+                <p>Providing you with <strong>well-organized</strong> events.</p>
+            </div>
+            <div class="useful-links">
+                <div class="footer-title">Useful Links</div>
+                <ul>
+                    <li><a href="venues.html">Venues</a></li>
+                    <li><a href="Registration.html">Sign In</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="#">Offers</a></li>
+                </ul>
+            </div>
+            <div class="help-sec">
+                <div class="footer-title">Help</div>
+                <ul>
+                    <li><a href="#">Help Me</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="#">Report an Issue / Bug</a></li>
+                </ul>
+            </div>
+            <div class="get-in-touch">
+                <div class="footer-title">Get in Touch</div>
+                <form action="/" method="post">
+                    <input type="text" name="name" class="form-input" placeholder="Name">
+                    <input type="email" name="email" class="form-input" placeholder="Email">
+                    <textarea name="message" class="form-input" placeholder="Message..."></textarea>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2024 Evento Services Pvt. Ltd.
+        </div>
+    </footer>
+
+
+</body>
+</html>

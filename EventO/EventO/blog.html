@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - EventO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f9;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            padding: 50px;
+        }
+        
+        .blog-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .blog-header h1 {
+            font-size: 3rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .blog-header p {
+            font-size: 1.2rem;
+            color: #777;
+        }
+        
+        .blog-posts {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        
+        .blog-post {
+            width: 45%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .blog-post img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .blog-post h2 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .blog-post p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .read-more {
+            font-size: 1rem;
+            color: #ff6f61;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .read-more:hover {
+            color: #ff3e3e;
+        }
+        
+        /* Floating Bubbles */
+        .bubbles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .bubble {
+            position: absolute;
+            bottom: -150px;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            animation: rise 6s infinite ease-in;
+        }
+        
+        @keyframes rise {
+            0% {
+                bottom: -150px;
+                transform: translateX(0);
+            }
+            100% {
+                bottom: 100vh;
+                transform: translateX(100px);
+            }
+        }
+        
+        .bubble:nth-child(2) {
+            width: 60px;
+            height: 60px;
+            animation-duration: 7s;
+        }
+        
+        .bubble:nth-child(3) {
+            width: 30px;
+            height: 30px;
+            animation-duration: 5s;
+        }
+        
+        .bubble:nth-child(4) {
+            width: 50px;
+            height: 50px;
+            animation-duration: 6s;
+        }
+        
+        .bubble:nth-child(5) {
+            width: 20px;
+            height: 20px;
+            animation-duration: 4s;
+        }
+        
+        /* Animations */
+        .animate__fadeIn {
+            animation: fadeIn 2s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .animate__slideInLeft {
+            animation: slideInLeft 2s ease-in;
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100px);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+        
+        .animate__slideInRight {
+            animation: slideInRight 2s ease-in;
+        }
+        
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100px);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <img src="EventO.1.png" alt="Evento Logo" class="logo">
+                <div class="nav-links">
+                    <a href="Registration.html" class="btn">Login</a>
+                    <a href="#" class="btn" onclick="redirectToMap()">Locate Us</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="sub-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="venues.html">Venues</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+            </ul>
+        </div>
+    </header>
+<div class="container">
+    <div class="blog-header">
+        <h1 class="animate__fadeIn">Our Event Management Blog</h1>
+        <p class="animate__fadeIn">Latest insights, trends, and stories in the event management world.</p>
+    </div>
+
+    <section class="blog-posts">
+        <!-- Blog Post 1 -->
+        <article class="blog-post animate__slideInRight">
+            <img src="virtual.jpg" alt="Blog 4">
+            <h2>Top Tips for Hosting a Virtual Event</h2>
+            <p>
+                Hosting a virtual event requires careful planning to ensure engagement. Start with a clear agenda and platform selection. Incorporate interactive elements such as polls and Q&A sessions to keep attendees involved. Ensure technical support is available to handle any issues that may arise, and consider follow-up actions to gather feedback and enhance future events.
+            </p>
+            <a href="#" class="read-more">Read More</a>
+        </article>
+
+        <!-- Blog Post 2 -->
+        <article class="blog-post animate__slideInRight">
+            <img src="wedd.jpg" alt="Blog 2">
+            <h2>10 Creative Ideas for Wedding Events</h2>
+            <p>
+                Make your wedding memorable with these creative ideas! From unique themes like vintage or bohemian to personalized decorations and interactive guest experiences, the possibilities are endless. Consider incorporating technology such as live streaming or social media walls to engage guests both present and virtual. Don't forget to plan fun activities that reflect your personality as a couple!
+            </p>
+            <a href="#" class="read-more">Read More</a>
+        </article>
+
+        <!-- Blog Post 3 -->
+        <article class="blog-post animate__slideInLeft">
+            <img src="trends.jpg" alt="Blog 3">
+            <h2>Event Planning Trends for 2024</h2>
+            <p>
+                As we look ahead to 2024, event planning is evolving rapidly. Key trends include sustainability practices, with an emphasis on reducing waste and sourcing local materials. The rise of hybrid events, combining in-person and virtual elements, is also shaping the industry. Additionally, personalization is becoming increasingly important, allowing organizers to create tailored experiences for attendees.
+            </p>
+            <a href="#" class="read-more">Read More</a>
+        </article>
+
+         <!-- Blog Post 4 -->
+        
+        <article class="blog-post animate__slideInLeft">
+            <img src="home.png" alt="Blog 1">
+            <h2>How to Organize a Successful Corporate Event</h2>
+            <p>
+                Planning a corporate event involves several key steps. Begin by defining the event's purpose, whether it's a conference, seminar, or networking event. Create a detailed timeline and budget, choose an appropriate venue, and ensure that all logistics, such as catering and audiovisual equipment, are in place. Engaging the audience through interactive sessions can also enhance the overall experience.
+            </p>
+            <a href="#" class="read-more">Read More</a>
+        </article>
+         <!-- Blog Post 5 -->
+         <article class="blog-post animate__slideInLeft">
+            <img src="w.jpg" alt="Blog 5">
+            <h2>Choosing the Right Venue for Your Event</h2>
+            <p>
+                Selecting the right venue is crucial for the success of your event. Consider factors like location, capacity, and amenities. It's important to visit potential venues to assess their suitability firsthand. Additionally, evaluate accessibility for guests, parking options, and any technical requirements needed for your event. The right venue can set the tone for an unforgettable experience.
+            </p>
+            <a href="#" class="read-more">Read More</a>
+        </article>
+
+    </section>
+</div>
+
+<div class="bubbles">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+</div>
+
+<script>
+    function redirectToMap() {
+        window.open("https://www.google.com/maps", "_blank");
+    }
+    
+</script>
+<footer>
+    <div class="footer-container">
+        <div class="app-info">
+            <span class="app-name">
+                <span class="app-initial">E</span>vento
+            </span>
+            <p>Providing you with <strong>well-organized</strong> events.</p>
+        </div>
+        <div class="useful-links">
+            <div class="footer-title">Useful Links</div>
+            <ul>
+                <li><a href="venues.html">Venues</a></li>
+                <li><a href="Registration.html">Sign In</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="#">Offers</a></li>
+            </ul>
+        </div>
+        <div class="help-sec">
+            <div class="footer-title">Help</div>
+            <ul>
+                <li><a href="#">Help Me</a></li>
+                <li><a href="#">Feedback</a></li>
+                <li><a href="#">Report an Issue / Bug</a></li>
+            </ul>
+        </div>
+        <div class="get-in-touch">
+            <div class="footer-title">Get in Touch</div>
+            <form action="/" method="post">
+                <input type="text" name="name" class="form-input" placeholder="Name">
+                <input type="email" name="email" class="form-input" placeholder="Email">
+                <textarea name="message" class="form-input" placeholder="Message..."></textarea>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="copyright">
+        &copy; 2024 Evento Services Pvt. Ltd.
+    </div>
+</footer>
+
+<script>
+    function redirectToMap() {
+        const mapUrl = 'https://maps.app.goo.gl/DqtcTpxd28bRUjBk9';
+        window.open(mapUrl, '_blank');
+    }
+</script>
+<!-- Chatbot Integration -->
+<button class="chatbot-button" id="chatbotButton">
+    <!-- <img src="fa" alt="Chat Icon"> -->
+  <li class="fa-brands fa-whatsapp" style="font-size: 30px;"></li>
+</button>
+
+<div class="chatbot-container" id="chatbotContainer">
+    <div class="chatbot-header">
+        <div class="agent-info">
+            <img src="chatbot.png" alt="Agent">
+            <div>
+                <p>EventO<span>(Online)</span></p>
+            </div>
+        </div>
+        <div class="close-btn" id="closeChatbot">&times;</div>
+    </div>
+
+    <div class="chatbot-body" id="chatBody">
+        <div class="chatbot-message">
+            <img src="chatbot.png" alt="Agent">
+            <div class="message-content">Hey! How can I assist you today?</div>
+        </div>
+
+                <!-- Predefined Questions -->
+      <div class="predefined-questions">
+        <button class="chatbot-btn" onclick="reply('New Event Enquiry')">New Event Enquiry</button>
+        <button class="chatbot-btn" onclick="reply('Existing Event Enquiry')">Existing Event Enquiry</button>
+        <button class="chatbot-btn" onclick="reply('New Vendor Registration')">New Vendor Registration</button>
+    </div>
+
+    </div>
+
+    <div class="chatbot-footer">
+        <input type="text" id="chatInput" placeholder="Send a message..." autocomplete="off">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<script>
+    const chatbotButton = document.getElementById('chatbotButton');
+const chatbotContainer = document.getElementById('chatbotContainer');
+const closeChatbot = document.getElementById('closeChatbot');
+const chatBody = document.getElementById('chatBody');
+const chatInput = document.getElementById('chatInput');
+
+// Show chatbot when button is clicked
+chatbotButton.addEventListener('click', () => {
+    chatbotContainer.style.display = 'flex';
+});
+
+// Close chatbot
+closeChatbot.addEventListener('click', () => {
+    chatbotContainer.style.display = 'none';
+});
+
+// Send user message
+function sendMessage() {
+    const message = chatInput.value.trim();
+    if (message !== "") {
+        displayUserMessage(message);
+        chatInput.value = ''; // Clear input field
+
+        // Simulate bot response (replace with real chatbot integration if needed)
+        setTimeout(() => {
+            displayBotMessage('Let me assist you with that.');
+        }, 1000);
+    }
+}
+
+// Display user message in chat body
+function displayUserMessage(message) {
+    const userMessage = `
+        <div class="chatbot-message user-message">
+            <div class="message-content">${message}</div>
+        </div>`;
+    chatBody.innerHTML += userMessage;
+    chatBody.scrollTop = chatBody.scrollHeight; // Scroll to the bottom
+}
+
+// Display bot message in chat body
+function displayBotMessage(message) {
+    const botMessage = `
+        <div class="chatbot-message">
+            <img src="chatbot.png" alt="Agent">
+            <div class="message-content">${message}</div>
+        </div>`;
+    chatBody.innerHTML += botMessage;
+    chatBody.scrollTop = chatBody.scrollHeight; // Scroll to the bottom
+}
+
+// Handle predefined question clicks
+function reply(question) {
+    displayUserMessage(question);
+
+    // Example predefined bot replies (can be expanded as needed)
+    let botResponse = "";
+    if (question === 'New Event Enquiry') {
+        botResponse = "Please provide details of your new event.";
+    } else if (question === 'Existing Event Enquiry') {
+        botResponse = "Please share the event ID for us to assist with your existing event.";
+    } else if (question === 'New Vendor Registration') {
+        botResponse = "Please submit your vendor details for registration.";
+    }
+
+    setTimeout(() => {
+        displayBotMessage(botResponse);
+    }, 1000);
+}
+
+</script>
+</body>
+</html>
