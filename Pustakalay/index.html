@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pustkalay : E-commerce</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css.css">
+</head>
+<body id="home">
+    <!-- Navigation Bar -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-book"></i> Pustkalay
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search here...">
+                <button type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div class="nav-icons">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-shopping-cart"></i>
+                <a href="login.html">
+                    <i class="fas fa-user"></i>
+                </a>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#section1">Featured</a></li>
+                <li><a href="#section2">Arrivals</a></li>
+                <li><a href="#clients-reviews">Reviews</a></li>
+                <li><a href="#about-us">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Promotional Section -->
+    <section class="promo">
+        <div class="promo-content">
+            <h1>Upto 25% Off</h1>
+            <p>Discover the best reads at unbeatable prices! Shop now and dive into your next adventure.</p>
+            <p>Explore our top picks in science fiction and thrillers! Unleash your imagination with up to 75% off.</p>
+            <p>Limited-time offer! Grab your favorite books at a massive discount. Don't miss out!</p>
+            <button class="shop-now">Shop Now</button>
+        </div>
+        <section>
+            <div class="slider">
+                <div class="slides">
+                    <img src="image/IMG-20240926-WA0001.jpg" class="slid" alt="image 1">
+                    <img src="image/IMG-20240926-WA0002.jpg" class="slid" alt="image 2">
+                    <img src="image/IMG-20240926-WA0003.jpg" class="slid" alt="image 3">
+                    <img src="image/IMG-20240926-WA0004.jpg" class="slid" alt="image 4">
+                    <img src="image/IMG-20240926-WA0005.jpg" class="slid" alt="image 5">
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Featured Books Section -->
+    <div id="section1" class="featured-books">
+        <h1>Featured Books</h1>
+        <div class="books-container">
+            <!-- Book 1 -->
+            <div class="book">
+                <img src="image/IMG-20240926-WA0002.jpg" alt="Book 1">
+                <p>Featured Books</p>
+                <p>
+                    <span class="price">₹999</span>
+                    <span class="discounted-price">₹749.99</span>
+                </p>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+
+            <!-- Book 2 -->
+            <div class="book">
+                <img src="image/IMG-20240926-WA0007.jpg" alt="Book 2">
+                <p>Featured Books</p>
+                <p>
+                    <span class="price">₹700</span>
+                    <span class="discounted-price">₹525</span>
+                </p>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+
+            <!-- Book 3 -->
+            <div class="book">
+                <img src="image/IMG-20240926-WA0004.jpg" alt="Book 3">
+                <p>Featured Books</p>
+                <p>
+                    <span class="price">₹900</span>
+                    <span class="discounted-price">₹675</span>
+                </p>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="services-container">
+            <div class="services-item">
+                <i class="fas fa-shipping-fast"></i>
+                <h3>Free Shipping</h3>
+                <p>Order Over ₹99</p>
+            </div>
+            <div class="services-item">
+                <i class="fas fa-lock"></i>
+                <h3>Secure Payment</h3>
+                <p>100% Secure Payment</p>
+            </div>
+            <div class="services-item">
+                <i class="fas fa-undo"></i>
+                <h3>Easy Returns</h3>
+                <p>10 Days Returns</p>
+            </div>
+            <div class="services-item">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 Support</h3>
+                <p>Call Us Anytime</p>
+            </div>
+        </div>
+    </section>
+
+    <section  id="section2" class="new-arrivals">
+        <h2>New Arrivals</h2>
+        <div class="product-grid">
+          <!-- Product 1 -->
+          <div class="product">
+            <div>
+                <img src="image/IMG-20240926-WA0014.jpg" alt="New Arrival 1">
+            </div>
+            <h3>New Arrivals</h3>
+            <p class="price">₹225 <span class="old-price">₹300</span></p>
+            <div class="rating">
+              <span>★★★★☆</span>
+            </div>
+          </div>
+    
+          <!-- Product 2 -->
+          <div class="product">
+            <div>
+                <img src="image/IMG-20240926-WA0009.jpg" alt="New Arrival 2">
+            </div>
+            <h3>New Arrivals</h3>
+            <p class="price">₹112.5 <span class="old-price">₹150</span></p>
+            <div class="rating">
+              <span>★★★★☆</span>
+            </div>
+          </div>
+    
+          <!-- Product 3 -->
+          <div class="product">
+            <div>
+                <img src="image/IMG-20240926-WA0008.jpg" alt="New Arrival 3">
+            </div>
+            <h3>New Arrivals</h3>
+            <p class="price">₹168.75 <span class="old-price">₹225</span></p>
+            <div class="rating">
+              <span>★★★★☆</span>
+            </div>
+          </div>
+    
+          <!-- Product 4 -->
+          <div class="product">
+            <div>
+                <img src="image/IMG-20240926-WA0007.jpg" alt="New Arrival 4">
+            </div>
+            <h3>New Arrivals</h3>
+            <p class="price">₹412.5 <span class="old-price">₹550</span></p>
+            <div class="rating">
+              <span>★★★★☆</span>
+            </div>
+          </div>
+    
+          <!-- Product 5 -->
+          <div class="product">
+            <div>
+                <img src="image/IMG-20240926-WA0006.jpg" alt="New Arrival 5">
+            </div>
+            <h3>New Arrivals</h3>
+            <p class="price">₹206.25 <span class="old-price">₹275</span></p>
+            <div class="rating">
+              <span>★★★★☆</span>
+            </div>
+          </div>
+    
+          <!-- Product 6 -->
+          <div class="product">
+            <div>
+                <img src="image/IMG-20240926-WA0003.jpg" alt="New Arrival 6">
+            </div>
+            <h3>New Arrivals</h3>
+            <p class="price">₹156.25 <span class="old-price">₹625</span></p>
+            <div class="rating">
+              <span>★★★★☆</span>
+            </div>
+          </div>
+    
+        </div>
+      </section>
+
+      <section class="deal-of-the-day">
+        <div class="deal-text">
+          <h3>Deal Of The Day</h3>
+          <h1>Up to 50% Off</h1>
+          <p>Limited-time offer! Grab your favorite books at a massive discount. Don't miss out!</p>
+          <a href="#" class="shop-now">Shop Now</a>
+        </div>
+    
+        <div class="deal-image">
+          <video src="image/WhatsApp Video 2024-09-26 at 15.13.09_11f6ce19.mp4" height="300vh" autoplay muted loop></video>
+        </div>
+      </section>
+
+
+      <section id="clients-reviews" class="clients-reviews">
+        <h2>Client's Reviews</h2>
+        <div class="reviews-container">
+          <!-- Review 1 -->
+          <div class="review-box">
+            <img src="image/WhatsApp Image 2024-10-06 at 11.35.38_928e0b38.jpg" alt="Client 1">
+            <h3>Mr.Nihar</h3>
+            <p>"This service has exceeded my expectations in every way. The support team is super responsive, and the product is exactly as described. I am extremely satisfied and would recommend it to anyone."</p>
+            <div class="rating">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+            </div>
+          </div>
+    
+          <!-- Review 2 -->
+          <div class="review-box">
+            <img src="image/WhatsApp Image 2024-09-26 at 15.14.28_6cc3daed.jpg" alt="Client 2">
+            <h3>Mr.MSK</h3>
+            <p>"I was skeptical at first, but after using the product for a few weeks, I'm convinced it's the best in the market. The quality is top-notch, and the pricing is very reasonable. Will definitely purchase again!"</p>
+            <div class="rating">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+            </div>
+          </div>
+    
+          <!-- Review 3 -->
+          <div class="review-box">
+            <img src="image/WhatsApp Image 2024-09-26 at 15.15.52_9ae7a0e1.jpg" alt="Client 3">
+            <h3>Mr.Tanish</h3>
+            <p>"I’ve been using this service for several months now, and I’m thoroughly impressed. The user interface is intuitive, and any issues I’ve encountered were resolved quickly by their fantastic customer service."</p>
+            <div class="rating">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about-us" style="padding: 50px 0; background-color: #f9f9f9;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <h2>About Us</h2>
+              <p>Learn more about our vision and mission.</p>
+              <hr style="width: 50px; border-top: 2px solid #5cb85c;">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <h3>Our Vision</h3>
+              <p>
+                To inspire a lifelong love of reading by providing access to a vast collection of books that ignite curiosity, knowledge, and creativity in readers of all ages.
+              </p>
+            </div>
+            <div class="col-md-6">
+              <h3>Our Mission</h3>
+              <p>
+                To be the leading online destination for book lovers, offering diverse and affordable books, fostering a community of readers, and enhancing the reading experience through seamless digital and physical access.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    <!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+        <!-- About Us Section -->
+        <div class="footer-about">
+            <h3>About Pustkalay</h3>
+            <p>Bookly is your one-stop shop for the latest and greatest in books, from timeless classics to new arrivals in every genre. Discover amazing deals and dive into your next great read today.</p>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div class="footer-links">
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Featured</a></li>
+                    <li><a href="#">Arrivals</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Returns & Refunds</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+        <!-- Newsletter Subscription -->
+        <div class="footer-newsletter">
+            <h4>Subscribe to Our Newsletter</h4>
+            <form action="#" method="post">
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="footer-copyright">
+            <p>&copy; 2024 Bookly. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+<script src="script.js"></script>
+</html>

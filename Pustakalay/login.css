@@ -1,0 +1,124 @@
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-form-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+  }
+  
+  .login-form-container h3 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .login-form-container span {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #555;
+  }
+  
+  .login-form-container .box {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .login-form-container .box:focus {
+    border-color: #5cb85c;
+    outline: none;
+  }
+  
+  .login-form-container .checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .login-form-container .checkbox input {
+    margin-right: 10px;
+  }
+  
+  .login-form-container .checkbox label {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .login-form-container .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #5cb85c;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-form-container .btn:hover {
+    background-color: #4cae4c;
+  }
+  
+  .login-form-container p {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .login-form-container p a {
+    color: #5cb85c;
+    text-decoration: none;
+  }
+  
+  .login-form-container p a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Close Button */
+  #close-login-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #aaa;
+  }
+  
+  #close-login-btn:hover {
+    color: #333;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .login-form-container {
+      padding: 30px;
+    }
+  
+    .login-form-container h3 {
+      font-size: 20px;
+    }
+  }
+  
